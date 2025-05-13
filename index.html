@@ -30,13 +30,15 @@
       padding: 20px 40px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .logo {
       display: flex;
       align-items: center;
+      margin-bottom: 15px;
     }
 
     .logo img {
@@ -49,6 +51,34 @@
       font-size: 1.8em;
       color: #ff5722;
       font-weight: bold;
+    }
+
+    nav {
+      background-color: #333;
+      width: 100%;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fdd835;
     }
 
     .hero {
@@ -72,45 +102,6 @@
     }
 
     .container {
-      display: flex;
-      flex: 1;
-    }
-
-    aside {
-      width: 250px;
-      background-color: #333;
-      color: white;
-      height: auto;
-      padding: 30px 20px;
-    }
-
-    aside h2 {
-      color: #fdd835;
-      margin-bottom: 20px;
-      font-size: 1.3em;
-    }
-
-    aside ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    aside ul li {
-      margin: 15px 0;
-    }
-
-    aside ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em;
-      transition: color 0.3s;
-    }
-
-    aside ul li a:hover {
-      color: #fdd835;
-    }
-
-    main {
       flex: 1;
       padding: 40px;
       display: flex;
@@ -144,13 +135,13 @@
     }
 
     @media (max-width: 768px) {
-      .container {
+      nav ul {
         flex-direction: column;
+        align-items: center;
       }
 
-      aside {
-        width: 100%;
-        text-align: center;
+      nav ul li {
+        margin: 10px 0;
       }
     }
   </style>
@@ -161,6 +152,14 @@
       <img src="https://i.imgur.com/xk3X8oF.png" alt="شعار طاقة إيجابية">
       <span class="logo-title">طاقة إيجابية</span>
     </div>
+    <nav>
+      <ul>
+        <li><a href="https://example.com/main">القائمة الرئيسية</a></li>
+        <li><a href="https://example.com/quotes">مقتبسات</a></li>
+        <li><a href="https://example.com/stories">قصص</a></li>
+        <li><a href="https://example.com/black-screen">مقتبسات شاشة سوداء</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="hero">
@@ -171,30 +170,18 @@
   </section>
 
   <div class="container">
-    <aside>
-      <h2>القائمة الجانبية</h2>
-      <ul>
-        <li><a href="https://example.com/main">القائمة الرئيسية</a></li>
-        <li><a href="https://example.com/quotes">مقتبسات</a></li>
-        <li><a href="https://example.com/stories">قصص</a></li>
-        <li><a href="https://example.com/black-screen">مقتبسات شاشة سوداء</a></li>
-      </ul>
-    </aside>
-
-    <main>
-      <div class="card">
-        <h3>الاقتباسات</h3>
-        <p>مجموعة من الاقتباسات المختارة بعناية لتناسب كل الأذواق وتُلهمك في مختلف المواقف.</p>
-      </div>
-      <div class="card">
-        <h3>القصص</h3>
-        <p>قصص تحفيزية، واقعية، ومؤثرة تلامس مشاعرك وتدفعك للتأمل والتغيير.</p>
-      </div>
-      <div class="card">
-        <h3>مقتبسات شاشة سوداء</h3>
-        <p>اقتباسات بتصميم أنيق على خلفيات سوداء تناسب الاستخدام الفني والمشاركات الاجتماعية.</p>
-      </div>
-    </main>
+    <div class="card">
+      <h3>الاقتباسات</h3>
+      <p>مجموعة من الاقتباسات المختارة بعناية لتناسب كل الأذواق وتُلهمك في مختلف المواقف.</p>
+    </div>
+    <div class="card">
+      <h3>القصص</h3>
+      <p>قصص تحفيزية، واقعية، ومؤثرة تلامس مشاعرك وتدفعك للتأمل والتغيير.</p>
+    </div>
+    <div class="card">
+      <h3>مقتبسات شاشة سوداء</h3>
+      <p>اقتباسات بتصميم أنيق على خلفيات سوداء تناسب الاستخدام الفني والمشاركات الاجتماعية.</p>
+    </div>
   </div>
 
   <footer>
