@@ -40,14 +40,14 @@
 
     nav ul {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       list-style: none;
-      padding: 15px 0;
+      padding: 15px 30px;
       margin: 0;
     }
 
     nav ul li {
-      margin: 0 25px;
+      margin: 0 15px;
       position: relative;
     }
 
@@ -56,6 +56,7 @@
       text-decoration: none;
       font-size: 1.2em;
       transition: color 0.3s;
+      cursor: pointer;
     }
 
     nav ul li a:hover {
@@ -71,9 +72,10 @@
       margin-top: 10px;
       border-radius: 8px;
       min-width: 200px;
+      right: 0;
     }
 
-    nav ul li:hover ul {
+    nav ul li.show ul {
       display: block;
     }
 
@@ -148,7 +150,8 @@
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
+        padding: 15px;
       }
 
       nav ul li {
@@ -166,8 +169,8 @@
     <nav>
       <ul>
         <li><a href="#">القائمة الرئيسية</a></li>
-        <li>
-          <a href="#">مقتبسات</a>
+        <li id="quotesMenu">
+          <a onclick="toggleMenu(event)">مقتبسات</a>
           <ul>
             <li><a href="https://example.com/quotes/motivational">تحفيزية</a></li>
             <li><a href="https://example.com/quotes/love">عن الحب</a></li>
@@ -210,5 +213,20 @@
   <footer>
     &copy; 2025 طاقة إيجابية - جميع الحقوق محفوظة
   </footer>
+
+  <script>
+    function toggleMenu(event) {
+      event.preventDefault();
+      const menu = document.getElementById('quotesMenu');
+      menu.classList.toggle('show');
+    }
+
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById('quotesMenu');
+      if (!menu.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  </script>
 </body>
 </html>
