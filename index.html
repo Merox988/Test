@@ -1,229 +1,137 @@
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281760778235392"
-     crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-     <meta name="google-adsense-account" content="ca-pub-1281760778235392">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>طاقة إيجابية</title>
+  <meta name="description" content="اكتشف اقتباسات تحفيزية، عن الحب، النجاح وأكثر من ذلك. طاقة إيجابية تلهمك كل يوم.">
+  <meta name="keywords" content="اقتباسات, تحفيز, حب, نجاح, طاقة إيجابية">
+  <meta name="author" content="نغم">
+  <title>الاقتباسات | طاقة إيجابية</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #fffbea, #e0f7fa);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    nav {
-      background-color: #333;
-      width: 100%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: flex-start;
-      list-style: none;
-      padding: 15px 30px;
       margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #333;
     }
-
-    nav ul li {
+    header, footer {
+      background: #fff;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
       margin: 0 15px;
-      position: relative;
-    }
-
-    nav ul li a {
-      color: white;
       text-decoration: none;
-      font-size: 1.2em;
-      transition: color 0.3s;
-      cursor: pointer;
+      font-size: 1.1em;
     }
-
-    nav ul li a:hover {
+    nav a:hover {
       color: #fdd835;
     }
-
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      background-color: #444;
-      padding: 10px;
-      list-style: none;
-      margin-top: 10px;
-      border-radius: 8px;
-      min-width: 200px;
-      right: 0;
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
     }
-
-    nav ul li.show ul {
-      display: block;
-    }
-
-    nav ul li ul li {
-      margin: 5px 0;
-    }
-
-    nav ul li ul li a {
-      color: white;
-      font-size: 0.95em;
-    }
-
-    nav ul li ul li a:hover {
-      color: #ffd600;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
-    }
-
-    .hero h1 {
-      font-size: 3.2em;
-      margin-bottom: 20px;
+    .section h2 {
       color: #ff5722;
-      font-weight: bold;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 10px;
     }
-
-    .hero p {
-      font-size: 1.3em;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.8;
-      color: #444;
-    }
-
-    .container {
-      flex: 1;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #00796b;
-    }
-
-    footer {
-      background: #eee;
+    .quote {
+      background: #fff;
+      border-right: 5px solid #4db6ac;
+      margin: 20px 0;
       padding: 20px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #666;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
-      }
-
-      nav ul li {
-        margin: 10px 0;
-      }
-
-      nav ul li ul {
-        position: static;
-      }
+    .quote p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+    .quote small {
+      display: block;
+      margin-top: 10px;
+      color: #777;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+    .nav-links a {
+      background: #e0f2f1;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #00796b;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .nav-links a:hover {
+      background: #b2dfdb;
     }
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">الرئيسية</a></li>
-        <li id="quotesMenu">
-          <a onclick="toggleMenu(event)">مقتبسات</a>
-          <ul>
-            <li><a href="https://example.com/quotes/motivational">تحفيزية</a></li>
-            <li><a href="https://example.com/quotes/love">عن الحب</a></li>
-            <li><a href="https://example.com/quotes/life">عن الحياة</a></li>
-            <li><a href="https://example.com/quotes/success">عن النجاح</a></li>
-            <li><a href="https://example.com/quotes/hope">عن الأمل</a></li>
-            <li><a href="https://example.com/quotes/friendship">عن الصداقة</a></li>
-            <li><a href="https://example.com/quotes/patience">عن الصبر</a></li>
-            <li><a href="https://example.com/quotes/wisdom">عن الحكمة</a></li>
-          </ul>
-        </li>
-        <li><a href="https://example.com/stories">قصص</a></li>
-        <li><a href="https://www.youtube.com/@%D9%85%D9%82%D8%AA%D8%A8%D8%B3%D8%A7%D8%AA.%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85">مقتبسات شاشة سوداء</a></li>
-      </ul>
-    </nav>
+    <h1>الاقتباسات</h1>
+    <p>مصدر إلهامك اليومي من أجمل الكلمات والعبارات</p>
   </header>
 
-  <section class="hero">
-    <h1>طاقة إيجابية</h1>
-    <p>
-      أهلاً بكم في عالم الإلهام والتحفيز. هنا تجدون اقتباسات مُلهمة وعبارات تحفّزكم للانطلاق نحو النجاح، إلى جانب قصص مؤثرة تترك في النفس أثراً طيباً، وتفتح أمامكم نوافذ الأمل والإيجابية.
-    </p>
+  <nav class="nav-links">
+    <a href="#motivational">تحفيزية</a>
+    <a href="#love">عن الحب</a>
+    <a href="#success">عن النجاح</a>
+  </nav>
+
+  <section class="section" id="motivational">
+    <h2>اقتباسات تحفيزية</h2>
+    <div class="quote">
+      <p>لا تنتظر الفرصة، اصنعها بنفسك.</p>
+      <small>– مجهول</small>
+    </div>
+    <div class="quote">
+      <p>كل إنجاز عظيم كان في البداية قراراً شجاعاً.</p>
+      <small>– نيلسون مانديلا</small>
+    </div>
   </section>
 
-  <div class="container">
-    <div class="card" onclick="location.href='https://example.com/quotes'">
-      <h3>الاقتباسات</h3>
-      <p>مجموعة من الاقتباسات المختارة بعناية لتناسب كل الأذواق وتُلهمك في مختلف المواقف.</p>
+  <section class="section" id="love">
+    <h2>اقتباسات عن الحب</h2>
+    <div class="quote">
+      <p>الحب لا يُقال، بل يُشعر ويُثبت بالفعل.</p>
+      <small>– جبران خليل جبران</small>
     </div>
-    <div class="card" onclick="location.href='https://example.com/stories'">
-      <h3>القصص</h3>
-      <p>قصص تحفيزية، واقعية، ومؤثرة تلامس مشاعرك وتدفعك للتأمل والتغيير.</p>
+    <div class="quote">
+      <p>أجمل ما في الحب أن نمنح دون مقابل.</p>
+      <small>– نزار قباني</small>
     </div>
-    <div class="card" onclick="location.href='https://www.youtube.com/@%D9%85%D9%82%D8%AA%D8%A8%D8%B3%D8%A7%D8%AA.%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85'">
-      <h3>مقتبسات شاشة سوداء</h3>
-      <p>اقتباسات بتصميم أنيق على خلفيات سوداء تناسب الاستخدام الفني والمشاركات الاجتماعية.</p>
+  </section>
+
+  <section class="section" id="success">
+    <h2>اقتباسات عن النجاح</h2>
+    <div class="quote">
+      <p>النجاح لا يأتيك، بل أنت تذهب إليه.</p>
+      <small>– مارفا كولينز</small>
     </div>
-  </div>
+    <div class="quote">
+      <p>الطريق إلى النجاح مليء بالتحديات، لكن الإصرار يعبّده.</p>
+      <small>– مجهول</small>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 طاقة إيجابية - جميع الحقوق محفوظة
   </footer>
-
-  <script>
-    function toggleMenu(event) {
-      event.preventDefault();
-      const menu = document.getElementById('quotesMenu');
-      menu.classList.toggle('show');
-    }
-
-    window.addEventListener('click', function(e) {
-      const menu = document.getElementById('quotesMenu');
-      if (!menu.contains(e.target)) {
-        menu.classList.remove('show');
-      }
-    });
-  </script>
 </body>
 </html>
