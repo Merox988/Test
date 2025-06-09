@@ -1,6 +1,4 @@
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281760778235392"
-     crossorigin="anonymous"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281760778235392"
-     crossorigin="anonymous"></script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +7,12 @@
   <meta name="keywords" content="اقتباسات, تحفيز, حب, نجاح, طاقة إيجابية">
   <meta name="author" content="نغم">
   <title>الاقتباسات | طاقة إيجابية</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281760778235392"
+    crossorigin="anonymous"></script>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -82,6 +85,13 @@
     .nav-links a:hover {
       background: #b2dfdb;
     }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -96,6 +106,7 @@
     <a href="#success">عن النجاح</a>
   </nav>
 
+  <!-- قسم تحفيزية -->
   <section class="section" id="motivational">
     <h2>اقتباسات تحفيزية</h2>
     <div class="quote">
@@ -105,12 +116,23 @@
     <div class="quote">
       <p>كل إنجاز عظيم كان في البداية قراراً شجاعاً.</p>
       <small>– نيلسون مانديلا</small>
-    </div><div style="text-align: center; margin-top: 20px;">
-  <a href="motivational.html" class="more-link">المزيد</a>
-</div>
-
+    </div>
+    <div id="more-motivational" style="display: none;">
+      <div class="quote">
+        <p>ابدأ الآن، فالوقت لن يكون مثاليًا أبدًا.</p>
+        <small>– نابليون هيل</small>
+      </div>
+      <div class="quote">
+        <p>الفشل ليس النهاية، بل هو بداية جديدة بحكمة أكبر.</p>
+        <small>– هنري فورد</small>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showMore('motivational')">المزيد</button>
+    </div>
   </section>
 
+  <!-- قسم الحب -->
   <section class="section" id="love">
     <h2>اقتباسات عن الحب</h2>
     <div class="quote">
@@ -120,12 +142,23 @@
     <div class="quote">
       <p>أجمل ما في الحب أن نمنح دون مقابل.</p>
       <small>– نزار قباني</small>
-    </div><div style="text-align: center; margin-top: 20px;">
-  <a href="motivational.html" class="more-link">المزيد</a>
-</div>
-
+    </div>
+    <div id="more-love" style="display: none;">
+      <div class="quote">
+        <p>الحب الحقيقي هو أن تجد من يفهم صمتك.</p>
+        <small>– أنيس منصور</small>
+      </div>
+      <div class="quote">
+        <p>أحياناً نظرة حب تكفي عن ألف كلمة.</p>
+        <small>– مجهول</small>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showMore('love')">المزيد</button>
+    </div>
   </section>
 
+  <!-- قسم النجاح -->
   <section class="section" id="success">
     <h2>اقتباسات عن النجاح</h2>
     <div class="quote">
@@ -135,14 +168,34 @@
     <div class="quote">
       <p>الطريق إلى النجاح مليء بالتحديات، لكن الإصرار يعبّده.</p>
       <small>– مجهول</small>
-    </div><div style="text-align: center; margin-top: 20px;">
-  <a href="motivational.html" class="more-link">المزيد</a>
-</div>
-
+    </div>
+    <div id="more-success" style="display: none;">
+      <div class="quote">
+        <p>سر النجاح هو الثبات على الهدف.</p>
+        <small>– بنيامين دزرائيلي</small>
+      </div>
+      <div class="quote">
+        <p>اعمل بذكاء أكثر من العمل بجهد فقط.</p>
+        <small>– مجهول</small>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showMore('success')">المزيد</button>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 طاقة إيجابية - جميع الحقوق محفوظة
   </footer>
+
+  <script>
+    function showMore(section) {
+      const moreSection = document.getElementById('more-' + section);
+      if (moreSection.style.display === 'none') {
+        moreSection.style.display = 'block';
+        event.target.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
